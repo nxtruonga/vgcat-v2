@@ -1,0 +1,10 @@
+services:
+  vgcatfe:
+    image: nxtruonga/vgcatfe
+    container_name: vgcatfe
+    environment:
+      NODE_ENV: production
+      PORT: "8080"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package so.v1;
+
+service SoService {
+  rpc GetIfm(GetIfmReq) returns (GetIfmResp) {}
+}
+
+message GetIfmReq {
+  repeated MsgItem messages = 1;
+
+  message MsgItem {
+    string role = 1;
+    string content = 2;
+  }
+}
+message GetIfmResp {
+  string id = 1;
+  string role = 2;
+  string type = 3;
+  string model = 4;
+  repeated MsgItem messages = 99;
+
+  message MsgItem {
+    string type = 1;
+    string text = 2;
+  }
+}

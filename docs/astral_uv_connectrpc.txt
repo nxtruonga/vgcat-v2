@@ -1,0 +1,8 @@
+--
+https://astral.sh/
+https://docs.astral.sh/uv/
+https://connectrpc.com/docs/python/getting-started/
+
+-- uv commands:
+uv add "protobuf>=v7.35.1" # This updates both: pyproject.toml, uv.lock
+uv add requests # 2.34.2

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package session.v1;
+
+service SessionService {
+  rpc GetSession(GetSessionReq) returns (GetSessionResp) {}
+}
+
+message GetSessionReq {
+  string user_id = 1;
+}
+message GetSessionResp {
+  string token = 1;
+}
